@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // In a real app, you would validate with a server
         // For demo purposes, using hardcoded credentials
-        if (username === 'admin' && password === 'VelocityFox22) {
+        if (username === 'admin' && password === 'password') {
             localStorage.setItem('isLoggedIn', 'true');
             loginForm.style.display = 'none';
             adminPanel.style.display = 'block';
