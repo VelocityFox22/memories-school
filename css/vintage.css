@@ -1,0 +1,132 @@
+:root {
+    --vintage-dark: #3E2723;
+    --vintage-light: #EFEBE9;
+    --vintage-accent: #8D6E63;
+    --vintage-gold: #BCAAA4;
+    --vintage-text: #5D4037;
+}
+
+.vintage-theme {
+    background-color: var(--vintage-light);
+    color: var(--vintage-text);
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.old-paper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/paper-texture.jpg');
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.vintage-header {
+    background: var(--vintage-dark);
+    color: var(--vintage-gold);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--vintage-accent);
+    position: relative;
+}
+
+.vintage-header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.vintage-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--vintage-gold);
+}
+
+.vintage-nav {
+    display: flex;
+    justify-content: center;
+    background: var(--vintage-accent);
+    padding: 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.vintage-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.vintage-nav a:hover {
+    background: var(--vintage-dark);
+}
+
+.admin-btn {
+    background: var(--vintage-gold);
+    color: var(--vintage-dark) !important;
+}
+
+/* Vintage Gallery Styles */
+.vintage-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.vintage-item {
+    border: 5px solid var(--vintage-accent);
+    padding: 10px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.vintage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.vintage-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: sepia(0.3);
+    transition: filter 0.3s ease;
+}
+
+.vintage-item:hover img {
+    filter: sepia(0);
+}
+
+.vintage-caption {
+    background: var(--vintage-dark);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+.dark-mode .old-paper-overlay {
+    opacity: 0.1;
+}
