@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri | Kenangan MA 2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-book"></i>
+            <span>MA Yearbook 2024</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html" class="active"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
+        </div>
+        
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-links">
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Gallery Section -->
+        <section class="section" id="gallery">
+            <div class="section-title">
+                <h2>Galeri Kenangan</h2>
+                <p>Kumpulan momen berharga selama 3 tahun bersama di MA</p>
+            </div>
+            
+            <div class="memories-tabs">
+                <button class="memories-tab active" data-year="all">Semua</button>
+                <button class="memories-tab" data-year="2022">2022</button>
+                <button class="memories-tab" data-year="2023">2023</button>
+                <button class="memories-tab" data-year="2024">2024</button>
+            </div>
+            
+            <div class="gallery" id="memoriesGallery">
+                <!-- Memories will be loaded from JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Tentang</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">Tentang Album</a></li>
+                    <li><a href="gallery.html">Galeri Foto</a></li>
+                    <li><a href="staff.html">Staf Sekolah</a></li>
+                    <li><a href="login.html">Admin</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@mayearbook2024.edu">Email Sekolah</a></li>
+                    <li><a href="tel:+628123456789">Telepon Sekolah</a></li>
+                    <li><a href="#">Alamat Sekolah</a></li>
+                    <li><a href="login.html">Kontak Admin</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Sosial Media</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <h3 style="margin-top: 2rem;">Credits</h3>
+                <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.9rem;">
+                    &copy; 2024 MA Yearbook<br>
+                    Developed by VelocityFox22
+                </p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2024 MA Yearbook Digital. All rights reserved.
+        </div>
+    </footer>
+    
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <audio id="bgMusic" loop>
+            <source src="assets/music/memory.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music-info" id="musicInfo">Memutar: Lagu Kenangan - Instrumental</div>
+        <button class="music-btn" id="musicBtn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
+        <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
