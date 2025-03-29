@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenangan MAMKET 2024 | Album Digital Eksklusif</title>
+    <title>Kenangan MA 2024 | Album Digital Eksklusif</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -17,11 +17,11 @@
         </div>
         
         <div class="nav-links">
-            <a href="#home">Beranda</a>
-            <a href="#memories">Kenangan</a>
-            <a href="#staff">Guru & Staf</a>
-            <a href="#facilities">Fasilitas</a>
-            <a href="#admin">Admin</a>
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
         </div>
         
         <div class="nav-actions">
@@ -38,23 +38,22 @@
     
     <div class="menu-overlay" id="menuOverlay">
         <div class="menu-links">
-            <a href="#home"><i class="fas fa-home"></i> Beranda</a>
-            <a href="#memories"><i class="fas fa-images"></i> Kenangan</a>
-            <a href="#staff"><i class="fas fa-chalkboard-teacher"></i> Guru & Staf</a>
-            <a href="#facilities"><i class="fas fa-school"></i> Fasilitas</a>
-            <a href="#admin"><i class="fas fa-lock"></i> Admin</a>
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
         </div>
     </div>
     
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="parallax-bg"></div>
+        <section class="hero">
             <div class="hero-content">
                 <h1>Kenangan Abadi MA 2024</h1>
                 <p>Mengabadikan setiap momen berharga dalam perjalanan pendidikan kita</p>
-                <button class="hero-btn" onclick="document.querySelector('#memories').scrollIntoView({ behavior: 'smooth' })">
+                <button class="hero-btn" onclick="window.location.href='gallery.html'">
                     Jelajahi Kenangan
                 </button>
             </div>
@@ -63,46 +62,24 @@
             </div>
         </section>
         
-        <!-- Memories Section -->
-        <section class="section" id="memories">
+        <!-- Featured Memories Section -->
+        <section class="section" id="featured">
             <div class="section-title">
-                <h2>Kenangan Kelas</h2>
-                <p>Kumpulan momen berharga selama 3 tahun bersama di MA</p>
+                <h2>Kenangan Terpilih</h2>
+                <p>Beberapa momen spesial yang kami abadikan</p>
             </div>
             
-            <div class="memories-tabs">
-                <button class="memories-tab active" data-year="all">Semua</button>
-                <button class="memories-tab" data-year="2022">2022</button>
-                <button class="memories-tab" data-year="2023">2023</button>
-                <button class="memories-tab" data-year="2024">2024</button>
+            <div class="gallery" id="featuredGallery">
+                <!-- Featured memories will be loaded from JavaScript -->
             </div>
             
-            <div class="gallery" id="memoriesGallery">
-                <!-- Memories will be loaded from JavaScript -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="gallery.html" class="btn">Lihat Semua Kenangan</a>
             </div>
         </section>
         
-        <!-- Staff Section -->
-        <section class="section" id="staff">
-            <div class="section-title">
-                <h2>Guru & Staf Sekolah</h2>
-                <p>Para pendidik dan tenaga kependidikan yang membimbing kita</p>
-            </div>
-            
-            <div class="staff-tabs">
-                <button class="staff-tab active" data-type="all">Semua</button>
-                <button class="staff-tab" data-type="teacher">Guru</button>
-                <button class="staff-tab" data-type="administration">Tata Usaha</button>
-                <button class="staff-tab" data-type="leadership">Kepemimpinan</button>
-            </div>
-            
-            <div class="staff-grid" id="staffGrid">
-                <!-- Staff will be loaded from JavaScript -->
-            </div>
-        </section>
-        
-        <!-- Facilities Section -->
-        <section class="section" id="facilities">
+        <!-- School Section -->
+        <section class="section" id="school">
             <div class="section-title">
                 <h2>Fasilitas Sekolah</h2>
                 <p>Berbagai tempat yang menjadi saksi perjalanan belajar kita</p>
@@ -116,7 +93,7 @@
                     <div class="school-info">
                         <h3>Gedung Utama</h3>
                         <p>Tempat kegiatan belajar mengajar sehari-hari</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
+                        <a href="gallery.html?category=school" class="school-link">Lihat Foto</a>
                     </div>
                 </div>
                 
@@ -127,7 +104,7 @@
                     <div class="school-info">
                         <h3>Perpustakaan</h3>
                         <p>Gudang ilmu dan tempat mencari referensi</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
+                        <a href="gallery.html?category=library" class="school-link">Lihat Foto</a>
                     </div>
                 </div>
                 
@@ -138,103 +115,25 @@
                     <div class="school-info">
                         <h3>Lapangan Sekolah</h3>
                         <p>Tempat olahraga dan kegiatan outdoor</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
-                    </div>
-                </div>
-                
-                <div class="school-card">
-                    <div class="school-img">
-                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lab Komputer">
-                    </div>
-                    <div class="school-info">
-                        <h3>Lab Komputer</h3>
-                        <p>Tempat belajar teknologi informasi</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
-                    </div>
-                </div>
-                
-                <div class="school-card">
-                    <div class="school-img">
-                        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Aula">
-                    </div>
-                    <div class="school-info">
-                        <h3>Aula Sekolah</h3>
-                        <p>Tempat acara besar dan pertemuan</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
-                    </div>
-                </div>
-                
-                <div class="school-card">
-                    <div class="school-img">
-                        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kantin">
-                    </div>
-                    <div class="school-info">
-                        <h3>Kantin</h3>
-                        <p>Tempat istirahat dan makan bersama</p>
-                        <a href="#" class="school-link">Lihat Foto</a>
+                        <a href="gallery.html?category=field" class="school-link">Lihat Foto</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Admin Section -->
-        <section class="admin-section" id="admin">
-            <div class="admin-container">
-                <div class="admin-tabs">
-                    <button class="admin-tab active" data-tab="login">Login Admin</button>
-                    <button class="admin-tab" data-tab="upload">Unggah Foto</button>
-                    <button class="admin-tab" data-tab="manage">Kelola Konten</button>
-                </div>
-                
-                <div class="admin-content active" id="login">
-                    <form class="login-form" id="loginForm">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" required>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-gold">Login</button>
-                    </form>
-                </div>
-                
-                <div class="admin-content" id="upload">
-                    <form class="upload-form" id="uploadForm">
-                        <div class="form-group">
-                            <label for="photo-upload">Pilih Foto</label>
-                            <input type="file" id="photo-upload" accept="image/*" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="photo-caption">Keterangan Foto</label>
-                            <input type="text" id="photo-caption" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="photo-year">Tahun</label>
-                            <select id="photo-year" required>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-gold">Unggah Foto</button>
-                    </form>
-                </div>
-                
-                <div class="admin-content" id="manage">
-                    <div class="manage-content">
-                        <h3>Kelola Foto</h3>
-                        <div class="manage-grid" id="manageGrid">
-                            <!-- Photos will be loaded here for management -->
-                        </div>
-                    </div>
-                </div>
+        <!-- Staff Preview Section -->
+        <section class="section" id="staff-preview">
+            <div class="section-title">
+                <h2>Guru & Staf</h2>
+                <p>Para pendidik yang telah membimbing kami</p>
+            </div>
+            
+            <div class="staff-grid" id="staffPreviewGrid">
+                <!-- Staff preview will be loaded from JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="staff.html" class="btn">Lihat Semua Staf</a>
             </div>
         </section>
     </main>
@@ -245,10 +144,10 @@
             <div class="footer-column">
                 <h3>Tentang</h3>
                 <ul class="footer-links">
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#memories">Kenangan Kelas</a></li>
-                    <li><a href="#staff">Guru & Staf</a></li>
-                    <li><a href="#facilities">Fasilitas</a></li>
+                    <li><a href="about.html">Tentang Album</a></li>
+                    <li><a href="gallery.html">Galeri Foto</a></li>
+                    <li><a href="staff.html">Staf Sekolah</a></li>
+                    <li><a href="login.html">Admin</a></li>
                 </ul>
             </div>
             
@@ -258,7 +157,7 @@
                     <li><a href="mailto:info@mayearbook2024.edu">Email Sekolah</a></li>
                     <li><a href="tel:+628123456789">Telepon Sekolah</a></li>
                     <li><a href="#">Alamat Sekolah</a></li>
-                    <li><a href="#admin">Kontak Admin</a></li>
+                    <li><a href="login.html">Kontak Admin</a></li>
                 </ul>
             </div>
             
@@ -287,7 +186,7 @@
     <!-- Music Player -->
     <div class="music-player" id="musicPlayer">
         <audio id="bgMusic" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <source src="assets/music/memory.mp3" type="audio/mpeg">
         </audio>
         <div class="music-info" id="musicInfo">Memutar: Lagu Kenangan - Instrumental</div>
         <button class="music-btn" id="musicBtn">
@@ -306,6 +205,7 @@
         </div>
     </div>
     
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
