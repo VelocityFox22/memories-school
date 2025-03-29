@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang | Kenangan MA 2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-book"></i>
+            <span>MA Yearbook 2024</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html" class="active"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
+        </div>
+        
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-links">
+            <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Galeri</a>
+            <a href="staff.html"><i class="fas fa-chalkboard-teacher"></i> Staf</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> Tentang</a>
+            <a href="login.html"><i class="fas fa-lock"></i> Admin</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-title">
+                <h2>Tentang Album Ini</h2>
+                <p>Sebuah kenangan abadi untuk semua anggota keluarga besar MA</p>
+            </div>
+            
+            <div class="about-content">
+                <p>Album digital ini dibuat sebagai bentuk apresiasi atas perjalanan panjang selama tiga tahun di Madrasah Aliyah. Setiap momen yang terabadikan di sini adalah bukti nyata dari perjuangan, persahabatan, dan kebersamaan yang telah kita bangun bersama.</p>
+                
+                <p>Dari hari pertama yang canggung hingga momen-momen mengharukan saat perpisahan, setiap foto menyimpan cerita unik yang takkan pernah terlupakan. Album ini juga menjadi penghormatan untuk semua guru dan staf yang telah membimbing kita dengan penuh dedikasi.</p>
+                
+                <div class="quote">
+                    "Pendidikan bukan hanya tentang mengisi pikiran, tetapi tentang menyalakan api keingintahuan dan membangun karakter. Terima kasih telah menjadi bagian dari perjalanan ini."
+                </div>
+                
+                <p class="signature">- Kelas XII MA Angkatan 2024 -</p>
+                
+                <div style="margin-top: 4rem; text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Tim Pengembang</h3>
+                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <img src="assets/images/developer.jpg" alt="Developer" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid var(--gold); margin-bottom: 1rem;">
+                            <h4>VelocityFox22</h4>
+                            <p style="color: var(--text-light);">Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Tentang</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">Tentang Album</a></li>
+                    <li><a href="gallery.html">Galeri Foto</a></li>
+                    <li><a href="staff.html">Staf Sekolah</a></li>
+                    <li><a href="login.html">Admin</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@mayearbook2024.edu">Email Sekolah</a></li>
+                    <li><a href="tel:+628123456789">Telepon Sekolah</a></li>
+                    <li><a href="#">Alamat Sekolah</a></li>
+                    <li><a href="login.html">Kontak Admin</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Sosial Media</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <h3 style="margin-top: 2rem;">Credits</h3>
+                <p style="color: var(--text-light); margin-top: 0.5rem; font-size: 0.9rem;">
+                    &copy; 2024 MA Yearbook<br>
+                    Developed by VelocityFox22
+                </p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2024 MA Yearbook Digital. All rights reserved.
+        </div>
+    </footer>
+    
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <audio id="bgMusic" loop>
+            <source src="assets/music/memory.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music-info" id="musicInfo">Memutar: Lagu Kenangan - Instrumental</div>
+        <button class="music-btn" id="musicBtn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
