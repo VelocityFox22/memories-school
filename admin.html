@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | MA Memories</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-login" id="loginForm">
+            <h2>Admin Login</h2>
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+        
+        <div class="admin-panel" id="adminPanel" style="display: none;">
+            <h2>Admin Panel</h2>
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="upload">Upload Foto</button>
+                <button class="tab-btn" data-tab="manage">Kelola Konten</button>
+            </div>
+            
+            <div class="tab-content active" id="upload">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="imageType">Jenis Foto</label>
+                        <select id="imageType" required>
+                            <option value="">Pilih Jenis</option>
+                            <option value="memory">Kenangan Kelas</option>
+                            <option value="teacher">Guru & Staf</option>
+                            <option value="building">Gedung Sekolah</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUpload">Pilih Foto</label>
+                        <input type="file" id="imageUpload" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageCaption">Keterangan</label>
+                        <textarea id="imageCaption" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherName" class="conditional" style="display: none;">Nama Guru</label>
+                        <input type="text" id="teacherName" class="conditional" style="display: none;">
+                    </div>
+                    <div class="form-group">
+                        <label for="teacherPosition" class="conditional" style="display: none;">Jabatan</label>
+                        <input type="text" id="teacherPosition" class="conditional" style="display: none;">
+                    </div>
+                    <button type="submit" class="btn-upload">Upload</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="manage">
+                <div class="content-list">
+                    <h3>Daftar Foto</h3>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Cari foto...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="content-items" id="contentItems">
+                        <!-- Content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <button id="logoutBtn" class="btn-logout">Logout</button>
+        </div>
+    </div>
+    
+    <script src="js/admin.js"></script>
+</body>
+</html>
