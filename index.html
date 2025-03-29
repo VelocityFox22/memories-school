@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenangan MA 2024 | Album Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-camera-retro"></i>
+            <span>MA Memories</span>
+        </div>
+        <button class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-links">
+            <a href="#memories"><i class="fas fa-images"></i> Kenangan Kelas</a>
+            <a href="#teachers"><i class="fas fa-chalkboard-teacher"></i> Guru & Staf</a>
+            <a href="#building"><i class="fas fa-school"></i> Gedung Sekolah</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+            <a href="#credits"><i class="fas fa-code"></i> Pengembang</a>
+            <a href="admin.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1>Kenangan 3 Tahun MA</h1>
+            <p>Momen berharga yang takkan terlupakan bersama teman-teman dan guru tercinta</p>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        
+        <!-- Memories Section -->
+        <section class="section" id="memories">
+            <div class="section-title">
+                <h2>Kenangan Kelas</h2>
+            </div>
+            <div class="gallery" id="memoriesGallery">
+                <!-- Images will be loaded from JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Teachers Section -->
+        <section class="section" id="teachers">
+            <div class="section-title">
+                <h2>Guru & Staf</h2>
+            </div>
+            <div class="teachers-grid" id="teachersGrid">
+                <!-- Teachers will be loaded from JavaScript -->
+            </div>
+        </section>
+        
+        <!-- School Building Section -->
+        <section class="building-section" id="building">
+            <div class="section-title">
+                <h2>Gedung Sekolah</h2>
+            </div>
+            <div class="building-gallery" id="buildingGallery">
+                <!-- Buildings will be loaded from JavaScript -->
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-title">
+                <h2>Tentang Kami</h2>
+            </div>
+            <div class="about-content">
+                <p>Album digital ini dibuat sebagai kenangan atas 3 tahun perjalanan kami di MA. Setiap momen yang terabadikan di sini adalah bukti persahabatan, perjuangan, dan kebersamaan yang tak ternilai.</p>
+                <p class="quote">"Terima kasih untuk semua guru, staf, dan teman-teman yang telah membuat perjalanan ini begitu berarti."</p>
+                <p class="signature">- Kelas XII IPA 1 Angkatan 2024 -</p>
+            </div>
+        </section>
+        
+        <!-- Credits Section -->
+        <section class="section" id="credits">
+            <div class="section-title">
+                <h2>Pengembang</h2>
+            </div>
+            <div class="credits-content">
+                <div class="developer-card">
+                    <img src="https://via.placeholder.com/150" alt="Developer" class="developer-img">
+                    <h3>VelocityFox22</h3>
+                    <p>Web Developer</p>
+                    <div class="developer-links">
+                        <a href="https://github.com/VelocityFox22" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="credits-text">Website ini dikembangkan dengan HTML, CSS, dan JavaScript. Terima kasih kepada semua yang telah mendukung pembuatan album kenangan digital ini.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Tentang</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#credits">Pengembang</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontak</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@mamemories.com">Email</a></li>
+                    <li><a href="tel:+628123456789">Telepon</a></li>
+                    <li><a href="#">Alamat Sekolah</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sosial Media</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 MA Memories. All rights reserved.
+        </div>
+    </footer>
+    
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music-info" id="musicInfo">Memutar: Lagu Kenangan</div>
+        <button class="music-btn" id="musicBtn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
+        <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+          </html>
