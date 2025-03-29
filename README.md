@@ -19,8 +19,3 @@ Website album digital untuk kenangan 3 tahun di MA (Madrasah Aliyah) angkatan 20
 - JavaScript
 - LocalStorage (untuk login admin sederhana)
 
-## Instalasi
-
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/VelocityFox22/ma-memories-2024.git
